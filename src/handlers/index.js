@@ -1,1 +1,2 @@
-import bot from "./users/commands.js"
+import {} from "./users/start.js"
+import {} from "./users/help.js"
