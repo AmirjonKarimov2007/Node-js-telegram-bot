@@ -6,8 +6,8 @@ const UsersSchema = new Schema({
     username: { type: String, required: false, unique: true },
     phoneNumber: { type: String, unique: true, required: false },
     is_premium: { type: Boolean, default: false },
-    is_blocked: { type: Boolean, default: false }
-
+    is_blocked: { type: Boolean, default: false },
+    role: { type: String, enum: ['superadmin', 'admin','user'], default: 'user' }
 }, { timestamps: true });
 
 const User = model('Users', UsersSchema);
